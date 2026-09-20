@@ -1,0 +1,111 @@
+import Head from 'next/head'
+
+import { PRODUCT } from '../lib/product'
+import { buildFaqJsonLd, buildHowToJsonLd } from '../lib/schema'
+
+const faqs = PRODUCT.geoFaq.map((x) => ({ question: x.q, answer: x.a }))
+
+const howToSteps = [
+  { name: 'Describe store policy context', text: 'Share return window, exceptions, and tone constraints.' },
+  { name: 'Draft policy or reply', text: 'Generate clear return/refund language customers can understand.' },
+  { name: 'Legal/CX review then publish', text: 'Confirm jurisdiction rules, then publish in your help center.' },
+]
+
+const articleLd = {
+  '@context': 'https://schema.org',
+  '@type': 'Article',
+  headline: PRODUCT.name + ' — ' + (PRODUCT.tagline || 'what it does and how to use it'),
+  description: PRODUCT.definitionLead,
+  author: { '@type': 'Organization', name: PRODUCT.name },
+  publisher: { '@type': 'Organization', name: PRODUCT.name },
+  mainEntityOfPage: { '@type': 'WebPage', '@id': 'https://' + PRODUCT.slug + '.lxsaihub.com/blog' },
+}
+
+export default function Page() {
+  const NAME = PRODUCT.name
+  const CANON = 'https://' + PRODUCT.slug + '.lxsaihub.com/blog'
+  const SHORT = "ReturnCopy drafts clear return and refund policy copy that keeps customer trust."
+  return (
+    <>
+      <Head>
+        <link rel="canonical" href={CANON} />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildFaqJsonLd(faqs)) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(buildHowToJsonLd('How to use ' + NAME, howToSteps)) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(articleLd) }}
+        />
+        <title>{NAME} — Blog</title>
+        <meta name="description" content={NAME + ' — ' + PRODUCT.definitionLead} />
+      </Head>
+      <div className="min-h-screen bg-slate-50 text-slate-800">
+        <header className="border-b border-slate-200 bg-white">
+          <div className="max-w-5xl mx-auto px-6 py-4 flex items-center justify-between">
+            <a href="/" className="font-bold text-slate-900">{NAME}</a>
+            <nav className="hidden md:flex gap-6 text-sm font-semibold text-slate-500">
+              <a href="/use-cases" className="hover:text-slate-900">Use cases</a>
+              <a href="/integrations" className="hover:text-slate-900">Integrations</a>
+              <a href="/how-it-works" className="hover:text-slate-900">How it works</a>
+              <a href="/security" className="hover:text-slate-900">Security</a>
+              <a href="/blog" className="hover:text-slate-900">Blog</a>
+            </nav>
+          </div>
+        </header>
+        <main className="max-w-3xl mx-auto px-6 py-14">
+          <h1 className="text-3xl font-bold text-slate-900">Blog</h1>
+          <p className="mt-3 text-lg font-semibold text-slate-900" data-geo-short-lead="1">ReturnCopy drafts clear return and refund policy copy that keeps customer trust.</p>
+          <p className="mt-2 text-slate-600">{PRODUCT.definitionLead}</p>
+          <p className="mt-3 text-sm text-slate-500">Typical path: 3 reviewable steps (input → generate → review). No fabricated user counts.</p>
+
+          <section className="mt-10">
+            <h2 className="text-xl font-bold text-slate-900">What does {NAME} include at a glance?</h2>
+            <ul className="mt-3 grid gap-2 sm:grid-cols-2">
+              {PRODUCT.features.map((f: string) => (
+                <li key={f} className="rounded-lg border border-slate-200 bg-white px-4 py-3 text-sm text-slate-700">{f}</li>
+              ))}
+            </ul>
+          </section>
+
+          <section className="mt-10">
+            <h2 className="text-xl font-bold text-slate-900">How do you use {NAME}?</h2>
+            <ol className="mt-3 space-y-3">
+              {howToSteps.map((s, i) => (
+                <li key={i} className="rounded-lg border border-slate-200 bg-white p-4">
+                  <p className="font-semibold text-slate-900">{i + 1}. {s.name}</p>
+                  <p className="mt-1 text-sm text-slate-600">{s.text}</p>
+                </li>
+              ))}
+            </ol>
+          </section>
+
+          <section className="mt-10">
+            <h2 className="text-xl font-bold text-slate-900">What do people ask about {NAME}?</h2>
+            <div className="mt-3 grid gap-4">
+              {faqs.map((f, i) => (
+                <article key={i} className="rounded-xl border border-slate-200 bg-white p-6">
+                  <h3 className="font-semibold text-slate-900">{f.question}</h3>
+                  <p className="mt-2 text-sm text-slate-600">{f.answer}</p>
+                </article>
+              ))}
+            </div>
+          </section>
+        </main>
+        <footer className="border-t border-slate-200 bg-white">
+          <div className="max-w-5xl mx-auto px-6 py-8 text-sm text-slate-500 flex flex-wrap gap-6">
+            <a href="/security" className="hover:text-slate-900">Security</a>
+            <a href="/use-cases" className="hover:text-slate-900">Use cases</a>
+            <a href="/integrations" className="hover:text-slate-900">Integrations</a>
+            <a href="/how-it-works" className="hover:text-slate-900">How it works</a>
+            <a href="/blog" className="hover:text-slate-900">Blog</a>
+          </div>
+        </footer>
+      </div>
+    </>
+  )
+}

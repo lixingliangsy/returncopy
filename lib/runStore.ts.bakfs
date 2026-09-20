@@ -1,0 +1,54 @@
+import fs from 'fs';
+import path from 'path';
+
+export interface RunRecord {
+  runId: string;
+  slug: string;
+  ts: number;
+  input: unknown;
+  output: unknown;
+  source: string;
+}
+
+const DATA_DIR = path.join(process.cwd(), '.data', 'runs');
+
+function ensureDir() {
+  if (!fs.existsSync(DATA_DIR)) fs.mkdirSync(DATA_DIR, { recursive: true });
+}
+
+export function saveRun(slug: string, input: unknown, output: unknown, source: string): RunRecord {
+  ensureDir();
+  const rec: RunRecord = {
+    runId: `${Date.now()}-${Math.random().toString(36).slice(2, 8)}`,
+    slug,
+    ts: Date.now(),
+    input,
+    output,
+    source,
+  };
+  fs.appendFileSync(path.join(DATA_DIR, `${slug}.jsonl`), JSON.stringify(rec) + '\n');
+  return rec;
+}
+
+export function loadRuns(slug: string, limit = 50): RunRecord[] {
+  const file = path.join(DATA_DIR, `${slug}.jsonl`);
+  if (!fs.existsSync(file)) return [];
+  return fs
+    .readFileSync(file, 'utf8')
+    .trim()
+    .split('\n')
+    .filter(Boolean)
+    .map((l) => JSON.parse(l) as RunRecord)
+    .sort((a, b) => (a.ts < b.ts ? 1 : -1))
+    .slice(0, limit);
+}
+
+export function exportRuns(slug: string, format: 'json' | 'csv' = 'json'): string {
+  const runs = loadRuns(slug, 1000);
+  if (format === 'csv') {
+    const headers = ['runId', 'slug', 'ts', 'source'];
+    const rows = runs.map((r) => [r.runId, r.slug, String(r.ts), r.source].join(','));
+    return [headers.join(','), ...rows].join('\n');
+  }
+  return JSON.stringify(runs, null, 2);
+}

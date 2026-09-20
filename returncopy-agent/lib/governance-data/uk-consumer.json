@@ -1,0 +1,40 @@
+{
+  "version": "uk-consumer@2026-07-23",
+  "standard": "UK Consumer Rights Act 2015 + Consumer Contracts Regulations 2013",
+  "source": "legislation.gov.uk",
+  "baseRef": "https://www.legislation.gov.uk/ukpga/2015/15/contents",
+  "obligations": [
+    {
+      "id": "uk-30day-reject",
+      "ref": "https://www.legislation.gov.uk/ukpga/2015/15/section/22/2015-09-01",
+      "title": "30-day short-term right to reject faulty goods",
+      "body": "Under the Consumer Rights Act 2015, if goods do not conform to the contract (not of satisfactory quality, not fit for purpose, or not as described), the consumer has a short-term right to reject within 30 days of delivery (or installation) and is entitled to a full refund. The trader may not make any deduction for use during this period.",
+      "tags": ["30-day", "refund", "faulty", "reject", "cra2015"],
+      "verify": true
+    },
+    {
+      "id": "uk-repair-replace",
+      "ref": "https://www.legislation.gov.uk/ukpga/2015/15/contents",
+      "title": "Repair / replacement / price reduction after 30 days",
+      "body": "After the 30-day rejection period, the consumer is entitled to one attempt at repair or replacement. If that fails, or is not possible within a reasonable time without significant inconvenience, the consumer can claim a price reduction (up to 100%) or a final rejection refund. Digital content carries equivalent repair/replacement/price-reduction rights.",
+      "tags": ["repair", "replacement", "price-reduction", "digital-content", "cra2015"],
+      "verify": true
+    },
+    {
+      "id": "uk-14day-cancel",
+      "ref": "https://www.legislation.gov.uk/uksi/2013/3137/contents",
+      "title": "14-day cancellation for distance/online contracts",
+      "body": "The Consumer Contracts (Information, Cancellation and Additional Charges) Regulations 2013 give UK consumers a 14-day cancellation right for distance sales (online, by phone, mail order) with no reason required. The trader must provide the cancellation right clearly before contract; failure to do so extends the cancellation period by up to 12 months.",
+      "tags": ["14-day", "cancellation", "distance-contract", "online", "ccr2013"],
+      "verify": true
+    },
+    {
+      "id": "uk-services-care",
+      "ref": "https://www.legislation.gov.uk/ukpga/2015/15/contents",
+      "title": "Services must be performed with reasonable care and skill",
+      "body": "Under CRA 2015 Part 1 Chapter 4, a service must be carried out with reasonable care and skill, at a reasonable price (if not agreed) and within a reasonable time. If the service falls short, the consumer is entitled to require the trader to repeat the service or to a price reduction, and the trader must not exclude these statutory rights in B2C contracts.",
+      "tags": ["services", "reasonable-care", "price-reduction", "repeat-service", "cra2015"],
+      "verify": true
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "version": "us-consumer@2026-07-23",
+  "standard": "US FTC rules + California Automatic Renewal Law + card-scheme refund rules",
+  "source": "ftc.gov / oag.ca.gov / visa.com / mastercard.com",
+  "baseRef": "https://consumer.ftc.gov/buyers-remorse-ftcs-cooling-rule-may-help",
+  "obligations": [
+    {
+      "id": "us-ftc-coolingoff",
+      "ref": "https://consumer.ftc.gov/buyers-remorse-ftcs-cooling-rule-may-help",
+      "title": "FTC Cooling-Off Rule — 3 business days to cancel door-to-door sales",
+      "body": "The FTC Cooling-Off Rule gives buyers 3 business days (until midnight) to cancel certain sales of $25+ made at the consumer's home, workplace, or a seller's temporary location (hotel, fair, etc.). The seller must orally disclose the right to cancel, give two copies of a cancellation form, and a dated receipt. If the consumer cancels, the seller must refund all money within 10 days. The Rule does NOT cover sales made entirely online, by mail, or by phone, or sales at the seller's permanent place of business.",
+      "tags": ["cooling-off", "3-day", "door-to-door", "ftc", "cancellation"],
+      "verify": true
+    },
+    {
+      "id": "us-ftc-truthful",
+      "ref": "https://www.ftc.gov/business-guidance/advertising-marketing/truthful-advertising",
+      "title": "FTC truthful advertising — no false refund/approval promises",
+      "body": "Under FTC truth-in-advertising rules, refund and return claims must be truthful, substantiated, and not misleading. Sellers must not promise guaranteed approval, guaranteed refunds, or absolute outcomes they cannot honor. A return/refund policy must match what is actually delivered; overstated promises are an unfair/deceptive practice.",
+      "tags": ["truthful-advertising", "no-false-promise", "ftc", "honesty", "refund"],
+      "verify": true
+    },
+    {
+      "id": "us-ca-autorenewal",
+      "ref": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-california%E2%80%99s-automatic-renewal-law",
+      "title": "California Automatic Renewal Law (ARL) — clear consent & easy cancel",
+      "body": "California's Automatic Renewal Law (as amended, effective 1 July 2025) requires express affirmative consent before charging for auto-renewing subscriptions, clear and conspicuous disclosure of the renewal terms, a post-signup acknowledgment the consumer can retain, and a cancellation method at least as easy as signup (online cancel must be available if enrolled online, with no dark-pattern obstacles). Material fee increases need 7–30 days' notice; annual reminders required.",
+      "tags": ["california", "automatic-renewal", "subscription", "cancel", "dark-pattern", "oag"],
+      "verify": true
+    },
+    {
+      "id": "us-visa-refund",
+      "ref": "https://usa.visa.com/dam/VCOM/global/support-legal/documents/processing-refunds-vrm-2016-04-21.pdf",
+      "title": "Visa refund processing — refund to original card account",
+      "body": "Visa requires merchants to process a refund to the same account number used in the original purchase (match by last four digits). US merchants must deposit the credit transaction with the acquirer that processed the original transaction within 5 days of issuing the credit. Refunds cannot be withheld as a tactic; the cardholder must be given a completed credit receipt as proof.",
+      "tags": ["visa", "refund", "original-account", "5-day", "card-scheme"],
+      "verify": true
+    },
+    {
+      "id": "us-mc-chargeback",
+      "ref": "https://www.mastercard.com/content/dam/public/mastercardcom/na/global-site/documents/chargeback-guide.pdf",
+      "title": "Mastercard chargeback rules — merchants cannot waive cardholder rights",
+      "body": "Mastercard's Chargeback Guide gives cardholders a dispute/refund-back mechanism (e.g. goods/services not provided, not as described, refund not processed). Under no circumstances may a merchant require a cardholder to waive chargeback rights. A clearly disclosed return policy and prompt refund handling reduce chargeback exposure; merchants must respond to disputes with evidence within scheme timeframes.",
+      "tags": ["mastercard", "chargeback", "dispute", "no-waiver", "card-scheme"],
+      "verify": true
+    }
+  ]
+}

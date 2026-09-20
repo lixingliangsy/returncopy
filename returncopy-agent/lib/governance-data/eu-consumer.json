@@ -1,0 +1,40 @@
+{
+  "version": "eu-consumer@2026-07-23",
+  "standard": "EU Consumer Rights Directive 2011/83/EU",
+  "source": "European Commission / EUR-Lex",
+  "baseRef": "https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/consumer-rights-directive_en",
+  "obligations": [
+    {
+      "id": "eu-withdrawal-14",
+      "ref": "https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/consumer-rights-directive_en",
+      "title": "14-day right of withdrawal for distance/e-commerce sales",
+      "body": "For distance and off-premises contracts (incl. online e-commerce), the consumer has the right to withdraw from the contract within 14 calendar days without giving any reason. The withdrawal period expires 14 days from the day the consumer or a third party (other than the carrier) acquires physical possession of the goods, or from contract conclusion for services.",
+      "tags": ["withdrawal", "distance-contract", "ecommerce", "cooling-off", "online"],
+      "verify": true
+    },
+    {
+      "id": "eu-refund-14",
+      "ref": "https://commission.europa.eu/law/law-topic/consumer-protection-law/consumer-contract-law/consumer-rights-directive_en",
+      "title": "Refund obligation within 14 days of withdrawal",
+      "body": "The trader must reimburse all payments received from the consumer, including the costs of delivery (the basic, least-expensive standard delivery), without undue delay and in any event not later than 14 days from the day the trader is informed of the consumer's decision to withdraw. The trader may withhold reimbursement until the goods are received back or the consumer supplies proof of having sent them back.",
+      "tags": ["refund", "timeline", "withdrawal", "reimbursement"],
+      "verify": true
+    },
+    {
+      "id": "eu-no-restock",
+      "ref": "https://eur-lex.europa.eu/eli/dir/2011/83/oj",
+      "title": "No restocking fee on withdrawal; return costs limited",
+      "body": "Under the right of withdrawal the trader may NOT charge a restocking fee. The trader may only require the consumer to bear the direct cost of returning the goods (e.g. postage) where the trader clearly informed the consumer of this in advance. Any deduction beyond that is unlawful.",
+      "tags": ["restocking-fee", "return-cost", "withdrawal", "no-fee"],
+      "verify": true
+    },
+    {
+      "id": "eu-withdrawal-exceptions",
+      "ref": "https://eur-lex.europa.eu/eli/dir/2011/83/oj",
+      "title": "Statutory exceptions from the right of withdrawal",
+      "body": "The 14-day withdrawal right does NOT apply to: goods made to the consumer's specifications / clearly personalised; sealed goods unsealed after delivery whose return would be impossible for health/hygiene reasons; goods liable to deteriorate or expire rapidly; sealed audio/video/software unsealed after receipt; newspapers/periodicals; accommodation/transport/rental services on an agreed date. Sellers may NOT waive the right for covered distance sales, and must disclose these exceptions clearly before contract.",
+      "tags": ["exceptions", "custom-made", "perishable", "sealed", "withdrawal"],
+      "verify": true
+    }
+  ]
+}

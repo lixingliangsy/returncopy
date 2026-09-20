@@ -1,0 +1,31 @@
+{
+  "version": "frameworks@2026-07-23",
+  "standard": "Crosswalk — EU / UK / US refund & return obligations",
+  "source": "Curated mapping of public consumer-protection frameworks",
+  "obligations": [
+    {
+      "id": "xw-eu-uk",
+      "ref": "https://www.legislation.gov.uk/ukpga/2015/15/contents",
+      "title": "EU ↔ UK alignment (post-Brexit retained rights)",
+      "body": "The UK retained the core of the EU Consumer Rights Directive via the Consumer Rights Act 2015 and the Consumer Contracts Regulations 2013. Both grant a 14-day cancellation right for distance/online sales and a tiered refund/remedy structure, so an EU-style return policy maps closely to UK obligations — but sellers serving both markets should disclose each regime explicitly and not rely on a single 'EU' label.",
+      "tags": ["crosswalk", "eu", "uk", "alignment", "distance-contract"],
+      "verify": true
+    },
+    {
+      "id": "xw-card-vs-statutory",
+      "ref": "https://usa.visa.com/dam/VCOM/global/support-legal/documents/processing-refunds-vrm-2016-04-21.pdf",
+      "title": "Card-scheme chargeback ≠ statutory refund right",
+      "body": "Visa/Mastercard chargeback is a payment-network dispute remedy, NOT a substitute for statutory refund rights (EU 14-day withdrawal, UK 30-day rejection, US state law). A compliant return policy must honour the statutory right first; the card-scheme path is a backstop when a merchant fails to refund. Never tell a customer a chargeback is their 'only' option where statute grants a direct refund.",
+      "tags": ["crosswalk", "chargeback", "statutory", "visa", "mastercard"],
+      "verify": true
+    },
+    {
+      "id": "xw-us-state-supplement",
+      "ref": "https://oag.ca.gov/news/press-releases/attorney-general-bonta-issues-consumer-alert-california%E2%80%99s-automatic-renewal-law",
+      "title": "US federal floor + state supplements (e.g. California ARL)",
+      "body": "The FTC sets a federal baseline (Cooling-Off Rule, truthful advertising) but does NOT grant a general 14-day e-commerce return right — that comes from seller policy or state law. States like California add stronger protections (Automatic Renewal Law). US return/refund copy must state the seller's own policy clearly and not imply a federal statutory return right that does not exist for ordinary online sales.",
+      "tags": ["crosswalk", "us", "federal", "state-law", "california", "ar"],
+      "verify": true
+    }
+  ]
+}

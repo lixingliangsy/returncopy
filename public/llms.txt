@@ -1,0 +1,43 @@
+# ReturnCopy - llms.txt
+
+> LLM-readable manifest (https://llmstxt.org). Features-only; no fabricated traffic or unverified payment claims.
+
+## Name & positioning
+- Product name: ReturnCopy
+- One-line value: ReturnCopy drafts clear return and refund policy copy that keeps customer trust — policy text and customer-facing replies for merchants who need language that is firm without sounding hostile.
+- Domain: https://returncopy.lxsaihub.com/
+- Language: English (en)
+
+## Domain context (verified primary sources)
+- schema.org — FAQPage: https://schema.org/FAQPage
+- Google Search Central — Structured data: https://developers.google.com/search/docs/appearance/structured-data/intro
+
+## FAQ
+Q1. What is ReturnCopy?
+A1. ReturnCopy generates return/refund policy and reply drafts for e-commerce teams.
+Q2. Who should use it?
+A2. Merchants and CX leads writing or refreshing return policies.
+Q3. Is it legal advice?
+A3. No. It drafts communications; local consumer law and counsel still win.
+Q4. What do I provide?
+A4. Your store context, return window, and any special constraints.
+Q5. Can it draft customer replies too?
+A5. Yes. It can draft customer-facing return replies alongside policy text.
+Q6. Does it guarantee compliance?
+A6. No. Deterministic checks help catch risky phrasing; jurisdiction review stays with you.
+
+## Key pages
+- Home: https://returncopy.lxsaihub.com/
+- Blog index: https://returncopy.lxsaihub.com/blog
+- https://returncopy.lxsaihub.com/blog/returncopy-overview-2026.html
+- https://returncopy.lxsaihub.com/blog/returncopy-howto-2026.html
+- This manifest: https://returncopy.lxsaihub.com/llms.txt
+
+## Pricing
+- Plans may appear on the product site. GEO assets omit unverified checkout product IDs.
+
+## Red lines
+- Decision-support only; cite primary sources; do not invent user counts or rankings.
+
+## Contact
+- Open the app: https://returncopy.lxsaihub.com/
